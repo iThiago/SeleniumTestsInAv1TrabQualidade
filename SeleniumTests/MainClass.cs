@@ -17,14 +17,13 @@ namespace SeleniumTests
 
         public static void Main(String[] args)
         {
-
-            RodarTeste(new AddClienteCpfInvalido(new ChromeDriver()));
-            RodarTeste(new AddCliente(new ChromeDriver()));
-            RodarTeste(new EditCliente(new ChromeDriver()));
-            RodarTeste(new DeleteCliente(new ChromeDriver()));
-            RodarTeste(new AddClienteCamposNulos(new ChromeDriver()));
             
-
+            //RodarTeste(new AddClienteCamposNulos(new ChromeDriver()));
+            //RodarTeste(new AddClienteCpfInvalido(new ChromeDriver()));
+            RodarTeste(new AddClienteCamposNulos(new ChromeDriver()));
+            //RodarTeste(new EditCliente(new ChromeDriver()));
+            //RodarTeste(new DeleteCliente(new ChromeDriver()));
+            
         }
 
         private static void RodarTeste(ITest classeTeste)
