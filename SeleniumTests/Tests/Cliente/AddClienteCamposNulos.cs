@@ -26,7 +26,6 @@ namespace SeleniumTests
             driver = new ChromeDriver();
         }
         
-        [Test]
         public override void TheClienteTest()
         {
            
@@ -46,7 +45,13 @@ namespace SeleniumTests
             Assert.IsTrue(driver.Title.Contains("Details"));
 
         }
-        
+
+        [Test]
+        public void AddCliente_DeveDarErroClienteSemNomePreenchido()
+        {
+            TheClienteTest();
+        }
+
     }
 
 }

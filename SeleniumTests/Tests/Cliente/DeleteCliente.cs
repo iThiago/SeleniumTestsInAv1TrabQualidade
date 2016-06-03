@@ -24,7 +24,6 @@ namespace SeleniumTests
             driver = new ChromeDriver();
         }
 
-        [Test]
         public override void TheClienteTest()
         {
             driver.Navigate().GoToUrl(baseURL + "/");
@@ -32,6 +31,12 @@ namespace SeleniumTests
             driver.FindElement(By.CssSelector("input.btn.btn-default")).Click();
             Assert.IsTrue(driver.Title.Contains("Cadastro"));
         }
-     
+
+        [Test]
+        public void DeleteCliente_DevePassarClienteValido()
+        {
+            TheClienteTest();
+        }
+
     }
 }

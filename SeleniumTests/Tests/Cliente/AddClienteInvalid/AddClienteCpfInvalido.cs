@@ -22,8 +22,7 @@ namespace SeleniumTests
         {
             driver = new ChromeDriver();
         }
-
-        [Test]
+        
         public override void TheClienteTest()
         {
             driver.Navigate().GoToUrl(baseURL + "/");
@@ -39,6 +38,11 @@ namespace SeleniumTests
             driver.FindElement(By.CssSelector("input.btn.btn-default")).Click();
             
             Assert.IsFalse(driver.Title.Contains("Details"));
+        }
+        [Test]
+        public void AddCliente_DevePassarRetornarCPFInvalido()
+        {
+            TheClienteTest();
         }
 
     }
