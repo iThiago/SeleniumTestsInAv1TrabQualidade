@@ -22,7 +22,9 @@ namespace SeleniumTests
             RodarTeste(new AddCliente(new ChromeDriver()));
             RodarTeste(new EditCliente(new ChromeDriver()));
             RodarTeste(new DeleteCliente(new ChromeDriver()));
+            RodarTeste(new AddClienteCamposNulos(new ChromeDriver()));
             
+
         }
 
         private static void RodarTeste(ITest classeTeste)
